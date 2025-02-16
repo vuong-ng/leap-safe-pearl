@@ -9,7 +9,7 @@ export default function UserInfo() {
 
     if (status === "authenticated") {
         return (
-        <div className="shadow-xl p-8 rounded-md flex flex-col gap-3 bg-yellow-200">
+        <div className="shadow-xl w-200 p-8 rounded-md flex flex-col gap-3 bg-yellow-200">
             <Image
             className="rounded-full"
             src={session?.user?.image}
