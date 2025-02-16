@@ -1,20 +1,24 @@
-"use client"
-import React, { useState } from 'react';
-import { Eye } from 'lucide-react';
-import Image from 'next/image';
-import UserInfo from './UserInfo';
-import SignInBtn from './SignInBtn';
+"use client";
+import React, { useState } from "react";
+import { Eye } from "lucide-react";
+import Image from "next/image";
+import UserInfo from "./UserInfo";
+import "../app/globals.css";
+import SignInBtn from "./SignInBtn";
 
 const SignInModal = () => {
   const [showPassword, setShowPassword] = useState(false);
-  
+
   return (
-      <div className="bg-white rounded-3xl p-8 w-full max-w-md relative shadow-lg">
+    <div className="min-h-screen w-full bg-pink-100 flex items-center justify-start p-4">
+      <div className="sign-in-container bg-white rounded-3xl p-8 w-full max-w-md relative shadow-lg">
         {/* Main Content */}
         <div className="space-y-6">
           <div>
             <h2 className="text-sm text-gray-600">Welcome to ""</h2>
-            <h1 className="text-4xl font-semibold text-rose-800 mt-2">Sign in</h1>
+            <h1 className="text-4xl font-semibold text-rose-800 mt-2">
+              Sign in
+            </h1>
           </div>
 
           {/* Form Fields */}
@@ -40,7 +44,7 @@ const SignInModal = () => {
                   placeholder="Password"
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
-                <button 
+                <button
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
                 >
@@ -72,8 +76,8 @@ const SignInModal = () => {
               />
               <span>Sign in with Google</span>
             </button> */}
-            <SignInBtn/>
-            
+            <SignInBtn />
+
             <div className="flex space-x-2">
               <button className="flex-1 bg-gray-400 text-white py-3 rounded-lg hover:bg-gray-500 transition-colors">
                 <Image
@@ -105,29 +109,90 @@ const SignInModal = () => {
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute -bottom-8 -left-8">
-          <div className="relative w-24 h-12">
+        {/* Image on the Right */}
+        <div className="right-image-container">
+          <div className="relative w-full h-auto">
+            <Image
+              src="/frog.png"
+              alt="Right-side image"
+              width={900}
+              height={900}
+              objectFit="contain"
+            />
+          </div>
+        </div>
+
+        {/* Clownfish Left */}
+        <div className="clownfish-container">
+          <div className="relative w-full h-auto">
             <Image
               src="/clownfish.png"
               alt="Decorative fish"
-              layout="fill"
+              width={200}
+              height={200}
               className="animate-swim"
             />
           </div>
         </div>
-        
-        <div className="absolute -right-16 -bottom-8">
-          <div className="relative w-32 h-32">
+        {/* Clownfish Left 2 */}
+        <div className="clownfish-container-2">
+          <div className="relative w-full h-auto">
             <Image
-              src="/frog.png"
-              alt="Decorative frog"
-              layout="fill"
-              className="animate-bounce"
+              src="/clownfish.png"
+              alt="Decorative fish"
+              width={100}
+              height={100}
+              className="animate-swim"
+            />
+          </div>
+        </div>
+        {/* Clownfish Right */}
+        <div className="clownfish-container-3">
+          <div className="relative w-full h-auto">
+            <Image
+              src="/clownfish.png"
+              alt="Decorative fish"
+              width={200}
+              height={200}
+              className="flipped-vertically"
+            />
+          </div>
+        </div>
+        {/* Airplane */}
+        <div className="container">
+          <div className="airplane">
+            <Image
+              src="/airplane.png"
+              alt="Airplane"
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+        {/* Airplane 2 */}
+        <div className="container">
+          <div className="airplane-2">
+            <Image
+              src="/airplane.png"
+              alt="Airplane"
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+        {/* Airplane 3 */}
+        <div className="container">
+          <div className="airplane-3">
+            <Image
+              src="/airplane.png"
+              alt="Airplane"
+              width={1000}
+              height={1000}
             />
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

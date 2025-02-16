@@ -1,3 +1,160 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sign-in-container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 50rem;
+  height: 50rem;
+}
+
+.right-image-container {
+  position: absolute;
+  top: -5%;
+  left: 310%;
+  width: 50rem;
+  height: 50rem;
+}
+
+.clownfish-container {
+  position: absolute;
+  top: 120%;
+  left: -50%;
+  width: 50rem;
+  height: 10rem;
+  animation: floatFish3 5s ease-in-out infinite;
+}
+
+.clownfish-container-2 {
+  position: absolute;
+  top: 135%;
+  left: -17%;
+  width: 50rem;
+  height: 5rem;
+  animation: floatFish3 7s ease-in-out infinite;
+}
+
+.clownfish-container-3 {
+  position: absolute;
+  top: -40%;
+  right: -440%;
+  width: 200px;
+  height: 200px;
+  animation: floatFish3 6s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.flipped-vertically {
+  transform: scaleX(-1);
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation for the clownfish to float */
+@keyframes floatFish1 {
+  0% {
+    transform: translateY(0) translateX(0); /* Start at the initial position */
+  }
+  50% {
+    transform: translateY(-15px) translateX(3px); /* Move up and slightly to the right */
+  }
+  100% {
+    transform: translateY(0) translateX(0); /* Return to the initial position */
+  }
+}
+
+@keyframes floatFish2 {
+  0% {
+    transform: translateY(0) translateX(0); /* Start at the initial position */
+  }
+  50% {
+    transform: translateY(-20px) translateX(4px); /* Move up and slightly to the right */
+  }
+  100% {
+    transform: translateY(0) translateX(0); /* Return to the initial position */
+  }
+}
+
+@keyframes floatFish3 {
+  0% {
+    transform: translateY(0) translateX(0); /* Start at the initial position */
+  }
+  50% {
+    transform: translateY(-10px) translateX(2px); /* Move up and slightly to the right */
+  }
+  100% {
+    transform: translateY(0) translateX(0); /* Return to the initial position */
+  }
+}
+
+/* Airplane */
+/* Set up the container to fill the screen */
+.container {
+  position: relative;
+  width: 100%;
+  height: 2vh;
+}
+
+/* Airplane styling and animation */
+.airplane {
+  position: absolute;
+  top: -2800%; /* Center vertically */
+  left: -100px; /* Start off-screen */
+  z-index: 2; /* Ensure the airplane stays on top */
+  animation: flyAirplane 11s linear infinite; /* Fly animation */
+}
+
+/* Airplane styling and animation */
+.airplane-2 {
+  position: absolute;
+  top: -2900%; /* Center vertically */
+  left: -1100px; /* Start off-screen */
+  z-index: 2; /* Ensure the airplane stays on top */
+  animation: flyAirplane 11s linear infinite; /* Fly animation */
+}
+
+/* Airplane styling and animation */
+.airplane-3 {
+  position: absolute;
+  top: -3000%; /* Center vertically */
+  left: -2100px; /* Start off-screen */
+  z-index: 2; /* Ensure the airplane stays on top */
+  animation: flyAirplane 11s linear infinite; /* Fly animation */
+}
+
+.airplane img {
+  width: 300px; /* Adjust the size of the airplane */
+  height: auto;
+}
+
+.airplane-2 img {
+  width: 300px; /* Adjust the size of the airplane */
+  height: auto;
+}
+
+.airplane-3 img {
+  width: 300px; /* Adjust the size of the airplane */
+  height: auto;
+}
+
+/* Animation to move the airplane from left to right */
+@keyframes flyAirplane {
+  0% {
+    transform: translateX(-500px); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(200vw); /* End off-screen to the right */
+  }
+}
+
+/* Animation for the dotted line to follow the airplane */
+@keyframes leaveTrail {
+  0% {
+    transform: translateX(-500px); /* Start off-screen */
+  }
+  100% {
+    transform: translateX(500vw); /* Move the line across the screen */
+  }
+}
