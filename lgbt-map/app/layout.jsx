@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-pink-100`}>
               <NextAuthProvider>
-                  <div className="max-w-3xl mx-auto">
+                  <div className="w-1/2 h-2/3">
                     <Navbar />
                     {children}
                   </div>

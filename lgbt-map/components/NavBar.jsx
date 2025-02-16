@@ -19,12 +19,12 @@ export default function Navbar() {
                     Contact
                 </Link>
                 {status === "authenticated" ? (
-                    <Button
+                    <button
                         onClick={() => signOut()}
                         className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded-xl shadow-card transition duration-300 ease-in-out"
                     >
                         Sign Out
-                    </Button>
+                    </button>
                 ) : (
                     <button
                         onClick={() => signIn("google")}

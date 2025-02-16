@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { Eye } from 'lucide-react';
 import Image from 'next/image';
 import UserInfo from './UserInfo';
+import SignInBtn from './SignInBtn';
 
 const SignInModal = () => {
   const [showPassword, setShowPassword] = useState(false);
   
   return (
-    <div className="min-h-screen w-full bg-pink-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl p-8 w-full max-w-md relative shadow-lg">
         {/* Main Content */}
         <div className="space-y-6">
@@ -72,7 +72,7 @@ const SignInModal = () => {
               />
               <span>Sign in with Google</span>
             </button> */}
-                      <UserInfo/>
+            <SignInBtn/>
             
             <div className="flex space-x-2">
               <button className="flex-1 bg-gray-400 text-white py-3 rounded-lg hover:bg-gray-500 transition-colors">
@@ -128,7 +128,6 @@ const SignInModal = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
