@@ -12,7 +12,7 @@ const SignInModal = () => {
   
   return (
     <div className="min-h-screen w-full bg-pink-100 flex items-center justify-start p-4">
-      <div className="sign-in-container bg-white rounded-3xl p-8 w-full max-w-md relative shadow-lg">
+      <div className="sign-in-container bg-white rounded-3xl p-8 w-full max-w-4xl relative shadow-lg">
         {/* Main Content */}
         <div className="space-y-6">
           <div>
@@ -78,27 +78,6 @@ const SignInModal = () => {
               <span>Sign in with Google</span>
             </button> */}
             <SignInBtn />
-
-            <div className="flex space-x-2">
-              <button className="flex-1 bg-gray-400 text-white py-3 rounded-lg hover:bg-gray-500 transition-colors">
-                <Image
-                  src="/facebook.svg"
-                  alt="Facebook"
-                  width={20}
-                  height={20}
-                  className="mx-auto w-5 h-5"
-                />
-              </button>
-              <button className="flex-1 bg-gray-300 text-white py-3 rounded-lg hover:bg-gray-400 transition-colors">
-                <Image
-                  src="/apple.svg"
-                  alt="Apple"
-                  width={20}
-                  height={20}
-                  className="mx-auto w-5 h-5"
-                />
-              </button>
-            </div>
           </div>
 
           {/* Sign Up Link */}
@@ -189,6 +168,18 @@ const SignInModal = () => {
               alt="Airplane"
               width={1000}
               height={1000}
+            />
+          </div>
+        </div>
+        {/* Destination Lines */}
+        <div className="dashed-lines-container">
+          <div className="relative w-full h-auto">
+            <Image
+              src="/dashedlines2.png"
+              alt="Right-side image"
+              width={3000}
+              height={10}
+              objectFit="contain"
             />
           </div>
         </div>
