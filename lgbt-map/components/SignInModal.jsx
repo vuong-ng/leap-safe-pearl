@@ -1,14 +1,15 @@
-"use client";
-import React, { useState } from "react";
-import { Eye } from "lucide-react";
-import Image from "next/image";
-import UserInfo from "./UserInfo";
-import "../app/globals.css";
-import SignInBtn from "./SignInBtn";
+"use client"
+import React, { useState } from 'react';
+import { Eye } from 'lucide-react';
+import Image from 'next/image';
+import UserInfo from './UserInfo';
+import { useSession } from 'next-auth/react';
+import SignInBtn from './SignInBtn';
 
 const SignInModal = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const { status } = useSession();
+  
   return (
     <div className="min-h-screen w-full bg-pink-100 flex items-center justify-start p-4">
       <div className="sign-in-container bg-white rounded-3xl p-8 w-full max-w-md relative shadow-lg">

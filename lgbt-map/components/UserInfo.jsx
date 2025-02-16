@@ -9,7 +9,7 @@ export default function UserInfo() {
     const { data: session } = useSession();
     const router = useRouter();
     const handleClick = () => {
-        router.push(`/pages/${session?.user?.id}`);
+        router.push(`/${session?.user?.id}`);
     };
 
         return (
@@ -18,7 +18,8 @@ export default function UserInfo() {
             className="rounded-full"
             src={session?.user?.image}
             width={60}
-            height={60}
+                    height={60}
+                    alt=""
             />
             <div>
             Name: <span className="font-bold">{session?.user?.name}</span>

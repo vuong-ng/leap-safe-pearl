@@ -7,9 +7,9 @@ const locationSchema = new Schema(
             required: true
         },
         visitCount: {
-            type: Number,  // Corrected to Number type
+            type: Number,
             required: false,
-            default: 0 // Set default value to 0
+            default: 0
         },
         description: {
             type: String,

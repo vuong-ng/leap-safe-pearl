@@ -41,6 +41,22 @@ const authOptions = {
 
         return user;
         },
+        async redirect({ url, baseUrl, account }) {
+            if (account?.provideAccountId) {
+                return `${baseUrl}/app/${account.provideAccountId}`;
+            }
+            return baseUrl;
+        },
+        async session({ session, token, user }) {
+            session.user.id = token.sub;
+            return session;
+        },
+        async jwt({ token, user, account, profile, isNewUser }) {
+            if (account) {
+                token.sub = account.provideAccountId;
+            }
+            return token;
+        }
     },
     };
 
