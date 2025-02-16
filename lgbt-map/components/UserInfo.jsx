@@ -1,15 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import SignInBtn from "./SignInBtn";
 import { useSession } from "next-auth/react";
+import { useRouter } from 'next/navigation';
+
 
 export default function UserInfo() {
-    const { status, data: session } = useSession();
+    const { data: session } = useSession();
+    const router = useRouter();
+    const handleClick = () => {
+        router.push(`/pages/${session?.user?.id}`);
+    };
 
-    if (status === "authenticated") {
         return (
-        <div className="shadow-xl w-200 p-8 rounded-md flex flex-col gap-3 bg-yellow-200">
+        <div className="shadow-xl w-200 p-8 rounded-md content-center bg-green-200">
             <Image
             className="rounded-full"
             src={session?.user?.image}
@@ -22,9 +26,9 @@ export default function UserInfo() {
             <div>
             Email: <span className="font-bold">{session?.user?.email}</span>
             </div>
+            <button onClick = {handleClick}>
+                Welcome! Click here to go to map
+            </button>
         </div>
         );
-    } else {
-        return <SignInBtn />;
-    }
 }

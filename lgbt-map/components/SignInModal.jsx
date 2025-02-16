@@ -4,6 +4,7 @@ import { Eye } from "lucide-react";
 import Image from "next/image";
 import UserInfo from "./UserInfo";
 import "../app/globals.css";
+import SignInBtn from "./SignInBtn";
 
 const SignInModal = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -75,7 +76,7 @@ const SignInModal = () => {
               />
               <span>Sign in with Google</span>
             </button> */}
-            <UserInfo />
+            <SignInBtn />
 
             <div className="flex space-x-2">
               <button className="flex-1 bg-gray-400 text-white py-3 rounded-lg hover:bg-gray-500 transition-colors">
