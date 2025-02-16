@@ -1,22 +1,22 @@
-"use client"
-import React, { useState } from 'react';
-import { Eye } from 'lucide-react';
-import Image from 'next/image';
-import UserInfo from './UserInfo';
-import { useSession } from 'next-auth/react';
-import SignInBtn from './SignInBtn';
+"use client";
+import React, { useState } from "react";
+import { Eye } from "lucide-react";
+import Image from "next/image";
+import UserInfo from "./UserInfo";
+import { useSession } from "next-auth/react";
+import SignInBtn from "./SignInBtn";
 
 const SignInModal = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { status } = useSession();
-  
+
   return (
     <div className="min-h-screen w-full bg-pink-100 flex items-center justify-start p-4">
       <div className="sign-in-container bg-white rounded-3xl p-8 w-full max-w-4xl relative shadow-lg">
         {/* Main Content */}
         <div className="space-y-6">
           <div>
-            <h2 className="text-sm text-gray-600">Welcome to ""</h2>
+            <h2 className="text-sm text-gray-600">Welcome to LeapSafe! </h2>
             <h1 className="text-4xl font-semibold text-rose-800 mt-2">
               Sign in
             </h1>
@@ -66,7 +66,7 @@ const SignInModal = () => {
           </div>
 
           {/* Social Sign In */}
-          <div className="space-y-3">
+          <div className="flex flex-col items-center space-y-3">
             {/* <button className="w-full bg-pink-100 text-gray-600 py-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-pink-200 transition-colors">
               <Image
                 src="/google.svg"
@@ -82,7 +82,7 @@ const SignInModal = () => {
 
           {/* Sign Up Link */}
           <div className="text-center space-x-1">
-            <span className="text-gray-600">No Account ?</span>
+            <span className="text-gray-600">No Account?</span>
             <a href="#" className="text-green-600 hover:underline">
               Sign up
             </a>
@@ -168,18 +168,6 @@ const SignInModal = () => {
               alt="Airplane"
               width={1000}
               height={1000}
-            />
-          </div>
-        </div>
-        {/* Destination Lines */}
-        <div className="dashed-lines-container">
-          <div className="relative w-full h-auto">
-            <Image
-              src="/dashedlines2.png"
-              alt="Right-side image"
-              width={3000}
-              height={10}
-              objectFit="contain"
             />
           </div>
         </div>

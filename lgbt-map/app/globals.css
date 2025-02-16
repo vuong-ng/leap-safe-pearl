@@ -8,12 +8,19 @@ body {
   height: 100%;
 }
 
+.navbar-container {
+  width: 200%;
+  max-width: 200%;
+  margin: 0;
+  padding: 0;
+}
+
 .sign-in-container {
   position: absolute;
   top: 24vh;
   left: 10vw;
   width: 50vw;
-  height: 47vh;
+  height: auto;
 }
 
 .right-image-container {
@@ -52,7 +59,7 @@ body {
 
 .clownfish-container-3 {
   position: absolute;
-  top: -27vh;
+  top: -17vh;
   right: -56vw;
   width: 10vw;
   height: 10vw;
@@ -69,37 +76,37 @@ body {
 /* Animation for the clownfish to float */
 @keyframes floatFish1 {
   0% {
-    transform: translateY(0) translateX(0); /* Start at the initial position */
+    transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translateY(-15px) translateX(3px); /* Move up and slightly to the right */
+    transform: translateY(-15px) translateX(3px);
   }
   100% {
-    transform: translateY(0) translateX(0); /* Return to the initial position */
+    transform: translateY(0) translateX(0);
   }
 }
 
 @keyframes floatFish2 {
   0% {
-    transform: translateY(0) translateX(0); /* Start at the initial position */
+    transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translateY(-20px) translateX(4px); /* Move up and slightly to the right */
+    transform: translateY(-20px) translateX(4px);
   }
   100% {
-    transform: translateY(0) translateX(0); /* Return to the initial position */
+    transform: translateY(0) translateX(0);
   }
 }
 
 @keyframes floatFish3 {
   0% {
-    transform: translateY(0) translateX(0); /* Start at the initial position */
+    transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translateY(-10px) translateX(2px); /* Move up and slightly to the right */
+    transform: translateY(-10px) translateX(2px);
   }
   100% {
-    transform: translateY(0) translateX(0); /* Return to the initial position */
+    transform: translateY(0) translateX(0);
   }
 }
 
@@ -114,7 +121,7 @@ body {
 .airplane {
   position: absolute;
   top: -57vh;
-  left: 250px;
+  left: 300px;
   z-index: 2;
   animation: flyAirplane 11s linear infinite;
 }
@@ -122,8 +129,8 @@ body {
 /* Airplane styling and animation */
 .airplane-2 {
   position: absolute;
-  top: -59vh;
-  left: 500px;
+  top: 15vh;
+  left: -200px;
   z-index: 2;
   animation: flyAirplane 11s linear infinite;
 }
